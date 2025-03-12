@@ -3,7 +3,7 @@
     "*.css": "tailwindcss"
   },
   "marscode.codeCompletionPro": {
-    "enableCodeCompletionPro": true
+    "enableCodeCompletionPro": false
   },
-  "marscode.enableInlineCommand": false
+  "marscode.enableInlineCommand": false,
 }
