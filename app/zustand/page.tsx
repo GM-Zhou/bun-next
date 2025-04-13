@@ -1,36 +1,34 @@
 'use client';
 
-import { createStore } from '@/store/create-store';
+import { createStore } from '@/store/zustand';
 
-const store = createStore((set) => ({
-  // Initial state
+const store = createStore({
   count: 0,
-  name: 'Zustand Store',
-  add: (value: number) => set((state) => ({ count: state.count + value }))
-}));
+  name: 'Zustand Store'
+});
 
 const ZustandPage = () => {
-  const count = store((state) => state.count);
-  const add = store((state) => state.add);
-  // const name = store.useStore((state) => state.name);
+  const { count, name } = store.useStore((state) => state);
+
   const setCount = (newCount: number) => {
     store.setState({ count: newCount });
   };
+
   const increment = () => {
     store.setState((state) => ({ count: state.count + 1 }));
   };
+
   const decrement = () => {
     store.setState((state) => ({ count: state.count - 1 }));
   };
+
   const reset = () => {
     store.setState({ count: 0 });
   };
 
-  console.log('Zustand Store:', count);
-
   return (
     <div className='max-w-2xl mx-auto p-8'>
-      <h1 className='text-3xl font-bold mb-4'>Zustand</h1>
+      <h1 className='text-3xl font-bold mb-4'>{name}</h1>
       <p className='text-gray-600 mb-2'>Simple state management library for React.</p>
       <p className='text-gray-600 mb-6'>Check the console for state changes.</p>
 
@@ -39,7 +37,7 @@ const ZustandPage = () => {
 
         <div className='grid grid-cols-2 gap-4 md:grid-cols-3'>
           <button
-            onClick={() => add(1)}
+            onClick={increment}
             className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors'
           >
             Increment
@@ -72,12 +70,12 @@ const ZustandPage = () => {
             onClick={() =>
               store.setState({
                 count,
-                name: '123123123'
+                name: Number(Math.random() * 1000).toString()
               })
             }
             className='bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition-colors'
           >
-            Set Count to 30
+            change name
           </button>
         </div>
       </div>
