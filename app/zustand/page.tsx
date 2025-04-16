@@ -1,6 +1,6 @@
 'use client';
 
-import { createStore } from '@/store/zustand';
+import { createStore } from '@/app/utils/zustand';
 
 const store = createStore({
   count: 0,
