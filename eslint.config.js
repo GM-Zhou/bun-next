@@ -27,6 +27,7 @@ const eslintConfig = [
       // prefer interface instead of type
       '@typescript-eslint/consistent-type-definitions': 'error',
       '@typescript-eslint/no-unsafe-function-type': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
       // no console
       'no-console': 'warn'
     }

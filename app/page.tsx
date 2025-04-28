@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'kucoin',
-  description: 'kucoin 机器人'
+  title: 'bun-next',
+  description: 'bun 构建的 next 学习项目'
 };
 
 export default function Page() {
