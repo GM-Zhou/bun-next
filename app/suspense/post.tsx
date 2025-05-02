@@ -7,7 +7,6 @@ interface Post {
 
 export default async function Post() {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
-  console.log('response', response.ok);
   if (!response.ok) {
     throw new Error('Failed to fetch post');
   }
