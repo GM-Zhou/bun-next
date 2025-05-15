@@ -3,7 +3,6 @@ import { Suspense } from 'react';
 import Post from './post';
 import { sleep } from './uitls';
 
-
 async function PostFeed() {
   await sleep(2000);
   return <h1>Hello PostFeed</h1>;
@@ -18,11 +17,6 @@ async function Recommend() {
   await sleep(4000);
   return <h1>Hello Recommend</h1>;
 }
-
-// async function PostLazy() {
-//   await sleep(3000);
-//   return <Post />;
-// }
 
 export default function SuspensePage() {
   return (

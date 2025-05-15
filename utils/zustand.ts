@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react';
 
-import { isFn } from '@/app/utils/type';
+import { isFn } from '@/utils/type';
 
 type Selector<T, R> = (state: T) => R;
 type Listener = () => void;
