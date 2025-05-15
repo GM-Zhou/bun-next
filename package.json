@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "bun --bun run next dev --turbopack",
-    "build": "bun --bun run next build",
+    "dev": "next dev --turbopack",
+    "build": "next build",
     "start": "next start",
-    "lint": "bun --bun run next lint"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "15.2.1",
