@@ -11,7 +11,6 @@ export default async function Page(props: PageProps) {
     throw new Error('Failed to fetch post');
   }
   const post = await res.json();
-  console.log('post', post);
   return (
     <main>
       <h1 className='text-2xl font-bold'>Blog Post: {params.id}</h1>
